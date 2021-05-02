@@ -1,0 +1,13 @@
+function init(self)
+	print("init - screen1")
+end
+
+function final(self)
+	print("final - screen1")
+end
+
+function on_message(self, message_id, message, sender)
+	if message_id == hash("foobar") then
+		_G.screen1_foobar = message or true
+	end
+end
